@@ -1,34 +1,182 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>awefawefawefawef</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Matthew's Portfolio Website</title>
+    <style>
+        header {
+            border: 1px solid #ccc;
+        }
+        main {
+            border: 1px solid #ccc;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="header">
+        <h2>HI THERE, NICE TO MEET YOU! I'M</h2>
+    </div>
     <header>
-        <h1>Main Title</h1>
+        <h1>Matthew Shen</h1>
+        <picture>
+          <img src="me.jpg" style="width="560" height="315"">
+        </picture>
+        <h3>And welcome to my portfolio website!</h3>
+        <hr>
+        <h2><span style="color:blue">Student at University of California San Diego</span></h2>
+        <p>Hello! I'm Matthew Shen, a sophomore in college pursuing a <br>
+          Computer Science BS degree. I'm extremely excited to contribute <br>
+          to real-world projects, and I look forward to learning from my <br>
+          experiences in various fields of computer science!</p>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about-me">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#hobbies">hobbies</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
+        <section class="aboutmepage" id="about-me">
+          <h2><span style="color:red">ABOUT ME</span></h2>
+</svg>
+          <pre>After discovering my passion for programming during high school, I've constantly looked for challenges
+to progress my coding and mathematical knowledge and techniques. In addition to the several computer
+science classes I take at school, I've attended several hackathons and loved the atmosphere and projects
+exposed to me.</pre>
+        </section>
+        <hr>
+        <section class="projectspage" id="projects">
+          <h2><span style="color:red">MY PROJECTS</span></h2>
+          <p>My journey began with that same <code> System.out.println("Hello World");</code> that so many others have begun with. Below are some of my solutions to more challenging problems I've faced while studying and researching</p>
+          <p><i>7x7 Skyscraper; Calculate 24; Memory Tiles</i></p>
+        </section>
+        <hr>
+        <section class="hobbiespage" id="hobbies">
+          <h2><span style="color:red">MY HOBBIES</span></h2>
+          <p>Some of my hobbies include <strong>table-tennis, chess, and exploring new places</strong></p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/2Qxz7hlQMLo?si=ximPT_SKOO6NdXWr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <p>I also love listening to <em>Backstreet Boys</em> songs and playing strategic/tactical videogames</p>
+          <audio controls>
+            <source src="bboys.mp3" type="audio/mpeg">
+          </audio>
+          <video width="560" height="315" controls muted>
+              <source src="clip.mp4" type="video/mp4">
+          </video>
+        </section>
+        <hr>
         <section>
-            <h2>Section Title</h2>
-            <p>This is a section of content.</p>
-            <img src="image.jpg" alt="An image">
+            <footer>
+                <p>Please feel free to contact me!</p>
+            </footer>
         </section>
         <aside>
-            <h3>Aside Title</h3>
-            <p>Additional information.</p>
+            <h3>Contact</h3>
+            <p>Please use the contact methods above through email, github, or phone number</p>
         </aside>
+        <hr>
+        <canvas id="myCanvas" width="500" height="100"></canvas>
+        <script>
+          var c = document.getElementById("myCanvas");
+          var ctx = c.getContext("2d");
+          ctx.font = "50px Arial";
+          ctx.strokeText("Thanks for Visiting!",10,50);
+        </script>
+        <figure>
+            <img src="cute.png" alt="An image">
+            <figcaption>(cute doggo heheh)</figcaption>
+        </figure>
     </main>
     <footer>
-        <p>&copy; 2023 Your Name</p>
+      <svg height="130" width="500">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+      <text fill="#ffffff" font-size="17" font-family="Verdana" x="45" y="75">Matthew Shen</text>
+      </svg>
+      <p>Please input your contact info below!</p>
+      <form>
+        <fieldset>
+          <legend>User:</legend>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="email">Email:</label><br>
+          <input type="text" id="email" name="email">
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
     </footer>
+    <section class="experiment" id="experiment">
+      <h2><span style="color:green">Experiments for other tags</span></h2>
+      <ol>
+        <li>already</li>
+        <li>used</li>
+        <li>a table above</li>
+      </ol>
+      <select>
+        <optgroup label="test group">
+          <option>new list type</option>
+        </optgroup>
+      </select>
+      <h2>Form Elements</h2>
+    <form>
+        <label for="text">Text Area:</label>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea>
+        <br>
+
+        <label for="fruit">Pick a fruit:</label>
+        <input list="fruits" id="fruit" name="fruit">
+        <datalist id="fruits">
+            <option value="Apple">
+            <option value="Banana">
+        </datalist>
+        <br>
+        <label for="colors">Pick a color:</label>
+        <select id="colors" name="color">
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <details>
+        <summary>Click to reveal more information</summary>
+        <p>more info</p>
+    </details>
+    <table border="1">
+        <caption>Sample Table</caption>
+        <colgroup>
+            <col style="background-color: #f0f0f0;">
+            <col span="2">
+        </colgroup>
+        <tr>
+            <th>h1</th>
+            <th>h2</th>
+            <th>h3</th>
+        </tr>
+        <tr>
+            <td>x, x</td>
+            <td>x, y</td>
+            <td>x, z</td>
+        </tr>
+        <tr>
+          <td>y, x</td>
+          <td>y, y</td>
+          <td>y, z</td>
+        </tr>
+    </table>
+    </section>
 </body>
 </html>
